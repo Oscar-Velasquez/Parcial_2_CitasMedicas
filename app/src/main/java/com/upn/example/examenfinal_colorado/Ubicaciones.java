@@ -22,9 +22,9 @@ public class Ubicaciones extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Ubicaciones.this, Mapas.class);
-                intent.putExtra("latitud", "-12.07391159151804");
-                intent.putExtra("longitud", "-76.95602955772794");
-                intent.putExtra("titulo", "Clinica Anglo Americana - Sede La Molina");
+                intent.putExtra("latitud", "13.343251082738023");
+                intent.putExtra("longitud", "-88.44985087371903");
+                intent.putExtra("titulo", "Hospital San Pedro");
                 startActivity(intent);
 
             }
@@ -35,9 +35,9 @@ public class Ubicaciones extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Ubicaciones.this, Mapas.class);
-                intent.putExtra("latitud", "-12.108002429349295");
-                intent.putExtra("longitud",  "-77.03900350993432");
-                intent.putExtra("titulo", "Clinica Anglo Americana - Sede San Isidro");
+                intent.putExtra("latitud", "13.347215398154267");
+                intent.putExtra("longitud",  "-88.44293944302608");
+                intent.putExtra("titulo", "Instituto Nacional del Seguro Social");
                 startActivity(intent);
 
             }

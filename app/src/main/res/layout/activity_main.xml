@@ -4,26 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/texturaceleste"
+    android:background="@drawable/img_1"
     tools:context=".MainActivity"
 
     >
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="389dp"
-        android:layout_height="119dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="391dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="36dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/unnamed" />
+        app:srcCompat="@drawable/iconosalud" />
 
     <Button
         android:id="@+id/btncitas"
         android:layout_width="309dp"
         android:layout_height="75dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="40dp"
         android:backgroundTint="@color/Boton1"
         android:text="Ver Citas"
         android:textColor="@color/black"
