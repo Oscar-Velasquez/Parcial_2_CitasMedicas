@@ -4,27 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="5dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:cardUseCompatPadding="true">
+        app:cardUseCompatPadding="true" >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="546dp"
-            android:background="@drawable/lista"
+            android:layout_height="match_parent"
+            android:background="@drawable/color_principal"
             android:padding="10dp">
 
             <TextView
                 android:id="@+id/textView13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="80dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="45dp"
                 android:text="Atendido por:"
-                android:textSize="16sp"
+                android:textSize="24sp"
                 android:textStyle="normal|bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView12" />
@@ -33,10 +34,10 @@
                 android:id="@+id/textView12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="92dp"
-                android:layout_marginTop="36dp"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="45dp"
                 android:text="Turno:"
-                android:textSize="16sp"
+                android:textSize="24sp"
                 android:textStyle="normal|bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView11" />
@@ -45,10 +46,10 @@
                 android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="72dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="45dp"
                 android:text="Lugar de Atencion: "
-                android:textSize="16sp"
+                android:textSize="24sp"
                 android:textStyle="normal|bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView10" />
@@ -58,9 +59,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="36dp"
+                android:layout_marginTop="45dp"
                 android:text="Cita para: "
-                android:textSize="16sp"
+                android:textSize="24sp"
                 android:textStyle="normal|bold"
                 app:layout_constraintStart_toEndOf="@+id/imageView4"
                 app:layout_constraintTop_toBottomOf="@+id/textView9" />
@@ -69,10 +70,10 @@
                 android:id="@+id/textView9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="80dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="45dp"
                 android:text="Telefono:"
-                android:textSize="16sp"
+                android:textSize="24sp"
                 android:textStyle="normal|bold"
                 app:layout_constraintStart_toEndOf="@+id/imageView4"
                 app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -81,70 +82,58 @@
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="44dp"
-                android:text="Nombre: "
-                android:textSize="16sp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="120dp"
+                android:text="Paciente: "
+                android:textSize="24sp"
                 android:textStyle="normal|bold"
                 app:layout_constraintStart_toEndOf="@+id/imageView4"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="Apellidos: "
-                android:textSize="16sp"
-                android:textStyle="normal|bold"
-                app:layout_constraintBottom_toTopOf="@+id/textView9"
-                app:layout_constraintStart_toEndOf="@+id/imageView4"
-                app:layout_constraintTop_toBottomOf="@+id/textView4"
-                app:layout_constraintVertical_bias="0.413" />
-
             <ImageView
                 android:id="@+id/imageView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="70dp"
                 android:layout_marginBottom="70dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_baseline_medical_services_24" />
+                app:srcCompat="@drawable/medical_" />
 
             <TextView
                 android:id="@+id/fila_nombre"
-                android:layout_width="144dp"
-                android:layout_height="24dp"
-                android:layout_marginTop="36dp"
-                android:text="Samuel"
-                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="123dp"
+                android:text="Oscar"
+                android:textSize="21sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.177"
+                app:layout_constraintHorizontal_bias="0.098"
                 app:layout_constraintStart_toEndOf="@+id/textView4"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/fila_apellido"
-                android:layout_width="142dp"
-                android:layout_height="24dp"
-                android:layout_marginTop="28dp"
-                android:text="De Lopez"
-                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:layout_marginTop="123dp"
+                android:text="Velasquez"
+                android:textSize="21sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.163"
-                app:layout_constraintStart_toEndOf="@+id/textView2"
-                app:layout_constraintTop_toBottomOf="@+id/fila_nombre" />
+                app:layout_constraintHorizontal_bias="0.271"
+                app:layout_constraintStart_toEndOf="@+id/fila_nombre"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/fila_dni"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="84dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="53dp"
                 android:text="71583119"
-                android:textSize="16sp"
+                android:textSize="21sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/textView9"
@@ -154,12 +143,12 @@
                 android:id="@+id/fila_espe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="40dp"
-                android:text="Tos seca"
-                android:textSize="16sp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="50dp"
+                android:text="Covid"
+                android:textSize="21sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.025"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/textView10"
                 app:layout_constraintTop_toBottomOf="@+id/fila_dni" />
 
@@ -168,23 +157,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="24dp"
-                android:text="San Nicho"
-                android:textSize="16sp"
+                android:layout_marginTop="208dp"
+                android:text="Shulton"
+                android:textSize="21sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.051"
+                app:layout_constraintHorizontal_bias="0.041"
                 app:layout_constraintStart_toEndOf="@+id/textView11"
-                app:layout_constraintTop_toBottomOf="@+id/fila_espe" />
+                app:layout_constraintTop_toBottomOf="@+id/fila_nombre" />
 
             <TextView
                 android:id="@+id/fila_turno"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="48dp"
                 android:text="Mañana"
-                android:textSize="16sp"
+                android:textSize="21sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.125"
+                app:layout_constraintHorizontal_bias="0.066"
                 app:layout_constraintStart_toEndOf="@+id/textView12"
                 app:layout_constraintTop_toBottomOf="@+id/fila_sede" />
 
@@ -192,31 +182,32 @@
                 android:id="@+id/fila_doc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="32dp"
-                android:text="Dr. Strage"
-                android:textSize="16sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="125dp"
+                android:text="Dr. Chapatin"
+                android:textSize="21sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/textView13"
-                app:layout_constraintTop_toBottomOf="@+id/fila_turno" />
+                app:layout_constraintTop_toBottomOf="@+id/fila_sede" />
 
             <ImageButton
                 android:id="@+id/btn_eliminar"
-                android:layout_width="59dp"
-                android:layout_height="61dp"
-                android:layout_marginBottom="32dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.271"
+                app:layout_constraintHorizontal_bias="0.115"
                 app:layout_constraintStart_toEndOf="@+id/btn_editar"
+                app:layout_constraintTop_toBottomOf="@+id/fila_doc"
+                app:layout_constraintVertical_bias="0.588"
                 app:srcCompat="@drawable/ic_baseline_delete_24" />
 
             <ImageButton
                 android:id="@+id/btn_editar"
                 android:layout_width="60dp"
-                android:layout_height="61dp"
-                android:layout_marginStart="168dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="120dp"
                 android:layout_marginTop="56dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/fila_doc"

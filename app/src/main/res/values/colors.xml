@@ -10,4 +10,13 @@
     <color name="Boton2">#FF9100</color>
     <color name="Boton1">#FFEA00</color>
     <color name="Boton3">#44FF00</color>
+
+    <color name="color1">#030742</color>
+    <color name="color2">#00BCD4</color>
+    <color name="color3">#7E0820</color>
+
+    <color name="color1a">#4B54DA</color>
+    <color name="color2a">#777AB1</color>
+    <color name="color3a">#00BED6</color>
+
 </resources>
