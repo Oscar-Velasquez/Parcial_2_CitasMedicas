@@ -12,6 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ExamenFinalColorado">
+        <activity
+            android:name=".Farmacias"
+            android:exported="false" />
         <activity android:name=".Inicio">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,8 +38,7 @@
         <activity android:name=".Citas" />
         <activity
             android:name=".MainActivity"
-            android:label="Citas Enlinea">
-        </activity>
+            android:label="Citas Enlinea"></activity>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

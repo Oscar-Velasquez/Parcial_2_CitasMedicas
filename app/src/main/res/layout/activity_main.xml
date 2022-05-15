@@ -15,19 +15,21 @@
         android:layout_height="match_parent"
         app:headerLayout="@layout/header"
         app:menu="@menu/mimenu"
-        android:layout_gravity="start"/>
+        android:layout_gravity="start">
+
+    </com.google.android.material.navigation.NavigationView>
 
 
     <RelativeLayout
     android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="391dp"
-        android:layout_height="122dp"
-        android:layout_marginTop="36dp"
-        app:srcCompat="@drawable/iconosalud" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="391dp"
+            android:layout_height="122dp"
+            android:layout_marginTop="36dp"
+            app:srcCompat="@drawable/iconosalud" />
 
     <Button
         android:id="@+id/btncitas"
@@ -59,20 +61,36 @@
         app:icon="@android:drawable/ic_menu_edit"
         app:iconTint="#020202" />
 
-    <Button
-        android:id="@+id/btnsedes"
-        android:layout_width="314dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="@color/Boton3"
-        android:text="Ver Sedes"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        app:cornerRadius="15dp"
-        app:icon="@android:drawable/ic_menu_mylocation"
-        app:iconTint="#020202"
-        android:layout_centerInParent="true"
-        android:layout_below="@id/btnformulario"/>
+        <Button
+            android:id="@+id/btnsedes"
+            android:layout_width="314dp"
+            android:layout_height="70dp"
+            android:layout_below="@id/btnformulario"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/Boton3"
+            android:text="Ver Sedes"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:cornerRadius="15dp"
+            app:icon="@android:drawable/ic_menu_mylocation"
+            app:iconTint="#020202" />
+
+        <Button
+            android:id="@+id/btnfarmacias"
+            android:layout_width="314dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/btnsedes"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/color2"
+            android:text="Farmacias"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:cornerRadius="15dp"
+            app:icon="@android:drawable/ic_menu_today"
+            app:iconTint="#020202" />
+
 
     </RelativeLayout>
 
