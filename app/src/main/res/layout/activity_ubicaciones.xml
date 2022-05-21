@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bcceleste"
+    android:background="@drawable/color_principal"
     tools:context=".Ubicaciones">
 
     <TextView
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:text="Hospital San Pedro "
-        android:textSize="20sp"
+        android:textSize="22sp"
         android:textStyle="normal|bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.091"
@@ -39,7 +39,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="28dp"
         android:text="Usulutan"
-        android:textSize="20sp"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -50,7 +50,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="76dp"
         android:text="ISSS"
-        android:textSize="20sp"
+        android:textSize="22sp"
         android:textStyle="normal|bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
@@ -62,7 +62,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="20dp"
         android:text="Usulutan"
-        android:textSize="20sp"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 

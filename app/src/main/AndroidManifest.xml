@@ -8,39 +8,18 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Clinic online"
+        android:label="Citas Enlinea"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ExamenFinalColorado">
-        <activity
-            android:name=".Doctores"
-            android:exported="false"
-            android:parentActivityName=".MainActivity"/>
-        <activity
-            android:name=".Acercade"
-            android:exported="false"
-            android:label="Acerca de"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".Ayuda"
-            android:exported="false"
-            android:label="Ayuda"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".menulateral"
-            android:exported="false" />
-        <activity
-            android:name=".Inicio"
-            android:theme="@style/Theme.Design.Light.NoActionBar">
+        <activity android:name=".Inicio">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Mapas"
-            android:label="mapas" />
+        <activity android:name=".Mapas" />
         <activity
             android:name=".Ubicaciones"
             android:label="Nuestras Sedes "
@@ -53,11 +32,10 @@
             android:name=".FormulariodeCitas"
             android:label="Registrar Cita"
             android:parentActivityName=".MainActivity" />
-
+        <activity android:name=".Citas" />
         <activity
             android:name=".MainActivity"
-            android:label="Clinic online"
-            android:parentActivityName=".menulateral">
+            android:label="Citas Enlinea">
         </activity>
 
         <meta-data
