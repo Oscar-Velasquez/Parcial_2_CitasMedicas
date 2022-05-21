@@ -12,9 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/aclonica"
         android:text="FORMULARIO DE CITAS"
         android:textSize="30sp"
-        android:fontFamily="@font/aclonica"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,111 +34,200 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtdoctor" />
+        app:layout_constraintTop_toBottomOf="@+id/txtdoc1" />
 
-    <EditText
-        android:id="@+id/txtnombre"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtnombre1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="56dp"
-        android:background="@drawable/editbuttom"
-        android:drawableLeft="@drawable/ic_baseline_person_24"
-        android:ems="10"
-        android:fontFamily="@font/aclonica"
-        android:hint="Ingrese un Nombre"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <EditText
-        android:id="@+id/txtapellido"
-        android:layout_width="300dp"
-        android:layout_height="42dp"
+        android:layout_height="55dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="56dp"
-        android:drawableLeft="@drawable/ic_baseline_person_24"
-        android:ems="10"
-        android:background="@drawable/editbuttom"
-        android:fontFamily="@font/aclonica"
-        android:hint="Ingrese un Apellido"
-        android:inputType="textPersonName"
+        android:textColorHint="#fff"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtnombre" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:startIconDrawable="@drawable/ic_baseline_person_24"
+        tools:layout_editor_absoluteX="58dp">
 
-    <EditText
-        android:id="@+id/txtespe"
+        <AutoCompleteTextView
+            android:id="@+id/txtnombre"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:textColor="#fff"
+            android:hint="Nombre" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtapellido1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
-        android:layout_height="42dp"
+        android:layout_height="55dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="56dp"
-        android:drawableLeft="@drawable/ic_baseline_school_24"
-        android:ems="10"
-        android:background="@drawable/editbuttom"
-        android:fontFamily="@font/aclonica"
-        android:hint="Ingrese Especialidad"
-        android:inputType="textPersonName"
+        android:textColorHint="#fff"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtdni" />
+        app:layout_constraintTop_toBottomOf="@+id/txtnombre1"
+        app:startIconDrawable="@drawable/ic_baseline_person_24"
+        tools:layout_editor_absoluteX="58dp">
 
-    <EditText
-        android:id="@+id/txtsede"
+        <AutoCompleteTextView
+            android:id="@+id/txtapellido"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:textColor="#fff"
+            android:hint="Apellido" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtespe1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="300dp"
-        android:layout_height="42dp"
+        android:layout_height="55dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="56dp"
-        android:drawableLeft="@drawable/ic_baseline_add_location_24"
-        android:ems="10"
-        android:background="@drawable/editbuttom"
-        android:fontFamily="@font/aclonica"
-        android:hint="Ingrese Centro de Consulta"
-        android:inputType="textPersonName"
+        android:textColorHint="#fff"
+        android:hint="@string/selected3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtespe" />
+        app:layout_constraintTop_toBottomOf="@+id/txtdni1"
+        app:startIconDrawable="@drawable/ic_baseline_school_24"
+        tools:layout_editor_absoluteX="58dp">
 
-    <EditText
-        android:id="@+id/txtturno"
+        <AutoCompleteTextView
+            android:id="@+id/txtespe"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:inputType="none"
+            android:textColor="#fff"
+            android:text="Ingrese Especialidad" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtsede1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="300dp"
-        android:layout_height="42dp"
+        android:layout_height="55dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="56dp"
-        android:drawableLeft="@drawable/ic_baseline_access_time_24"
-        android:ems="10"
-        android:background="@drawable/editbuttom"
-        android:fontFamily="@font/aclonica"
-        android:hint="Ingrese el Turno"
-        android:inputType="textPersonName"
+        android:textColorHint="#fff"
+        android:hint="@string/selected2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtsede" />
+        app:layout_constraintTop_toBottomOf="@+id/txtespe1"
+        app:startIconDrawable="@drawable/ic_baseline_add_location_24"
+        tools:layout_editor_absoluteX="58dp">
 
-    <EditText
-        android:id="@+id/txtdoctor"
+        <AutoCompleteTextView
+            android:id="@+id/txtsede"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:inputType="none"
+            android:textColor="#fff"
+            android:text="Centro de atencion" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtturno1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="300dp"
-        android:layout_height="42dp"
+        android:layout_height="55dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="56dp"
-        android:drawableLeft="@drawable/ic_baseline_medico"
-        android:ems="10"
-        android:background="@drawable/editbuttom"
-        android:fontFamily="@font/aclonica"
-        android:hint="Ingrese el Doctor"
-        android:inputType="textPersonName"
+        android:textColorHint="#fff"
+        android:hint="@string/selected1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtturno" />
+        app:layout_constraintTop_toBottomOf="@+id/txtsede1"
+        app:startIconDrawable="@drawable/ic_baseline_access_time_24"
+        tools:layout_editor_absoluteX="58dp">
 
-    <EditText
-        android:id="@+id/txtdni"
+        <AutoCompleteTextView
+            android:id="@+id/txtturno"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:inputType="none"
+            android:textColor="#fff"
+            android:text="Turno" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtdni1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
-        android:layout_height="42dp"
+        android:layout_height="55dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="56dp"
-        android:drawableLeft="@drawable/ic_baseline_perm_contact_calendar_24"
-        android:ems="9"
-        android:fontFamily="@font/aclonica"
-        android:hint="Telefono"
-        android:background="@drawable/editbuttom"
-        android:inputType="number"
+        android:textColorHint="#fff"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtapellido" />
+        app:layout_constraintTop_toBottomOf="@+id/txtapellido1"
+        app:startIconDrawable="@drawable/ic_baseline_perm_contact_calendar_24"
+        tools:layout_editor_absoluteX="58dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/txtdni"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:textColor="#fff"
+            android:hint="Numero de Telefono" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtdoc1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="56dp"
+        android:textColorHint="#fff"
+        android:hint="@string/selected"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtturno1"
+        app:startIconDrawable="@drawable/doc"
+        tools:layout_editor_absoluteX="58dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/txtdoctor"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:inputType="none"
+            android:textColor="#fff"
+            android:text="Doctores" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

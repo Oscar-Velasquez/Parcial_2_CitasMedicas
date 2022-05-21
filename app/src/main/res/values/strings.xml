@@ -2,4 +2,15 @@
     <string name="app_name">Citas Medicas</string>
 
     <string name="titulo_header">Clinic Online</string>
+
+    <string name="selected">Seleccione Doctor</string>
+    <string name="selected1">Seleccione Turno</string>
+    <string name="selected2">Seleccione Sede</string>
+    <string name="selected3">Selecciones Especialidad</string>
+
+    <string name="menu_Open">Drawer Menu</string>
+    <string name="close_menu">Close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

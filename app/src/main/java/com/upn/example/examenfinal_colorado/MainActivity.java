@@ -1,14 +1,24 @@
 package com.upn.example.examenfinal_colorado;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.material.navigation.NavigationView;
+
 public class MainActivity extends AppCompatActivity {
     Button vercitas, formulario, sedes;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         vercitas();
         realizarformulario();
         versedes();
+
     }
 
     private void vercitas(){
@@ -49,4 +60,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 }

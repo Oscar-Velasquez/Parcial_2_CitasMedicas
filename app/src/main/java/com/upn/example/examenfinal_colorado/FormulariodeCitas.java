@@ -2,14 +2,21 @@ package com.upn.example.examenfinal_colorado;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import com.google.android.material.navigation.NavigationView;
 import com.upn.example.examenfinal_colorado.Dao.CitasDao;
 import com.upn.example.examenfinal_colorado.Entidad.Cita;
 
@@ -20,6 +27,26 @@ public class FormulariodeCitas extends AppCompatActivity {
     String txtnombre, txtapellido, txtdni, txtespe, txtsede, txtturno, txtdoc;
     int id, dnei;
 
+    //Opciones para Doctor
+    String[] itemsdoctor = {"Dr. Edwin Espinosa","Dr. Sergio Lopez","Dr. Pedro Mendoza"};
+    AutoCompleteTextView autoCompleteTxt;
+    ArrayAdapter<String> adapterItemsdoctor;
+
+    //Opciones para turno
+    String[] itemsturno = {"6:00 a.m","7:00 a.m","8:00 a.m","9:00 a.m","10:00 a.m","11:00 a.m", "12:00 p.m","1:00 p.m","2:00 p.m","3:00 p.m","4:00 p.m"};
+    AutoCompleteTextView autoCompletetxt1;
+    ArrayAdapter<String> adapterItemsturno;
+
+    //Opciones para Sede
+    String[] itemssede = {"ISSS","San Pedro"};
+    AutoCompleteTextView autoCompletetxt2;
+    ArrayAdapter<String> adapterItemsSede;
+
+    //Opciones para Especialidad
+    String[] itemsespe = {"Pediatra","Cirujano General","Anestesiologo","Rayos X","Partos","Nutricionista","Fisioterapia"};
+    AutoCompleteTextView autoCompletetxt3;
+    ArrayAdapter<String> adapterItemsespe;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +54,66 @@ public class FormulariodeCitas extends AppCompatActivity {
         referencias();
         validarcampos();
         recibirdatos();
+
+        //Codigo para seleccionar doctor
+        autoCompleteTxt = findViewById(R.id.txtdoctor);
+
+        adapterItemsdoctor = new ArrayAdapter<String>(this,R.layout.list_item,itemsdoctor);
+
+        autoCompleteTxt.setAdapter(adapterItemsdoctor);
+
+        autoCompleteTxt.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+                String item = parent.getItemAtPosition(position).toString();
+                Toast.makeText(getApplicationContext(),"Item: "+item, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //Codigo para seleccionar Turno
+        autoCompletetxt1 = findViewById(R.id.txtturno);
+
+        adapterItemsturno = new ArrayAdapter<String>(this,R.layout.list_item,itemsturno);
+
+        autoCompletetxt1.setAdapter(adapterItemsturno);
+
+        autoCompletetxt1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+                String item = parent.getItemAtPosition(position).toString();
+                Toast.makeText(getApplicationContext(),"Item: "+item, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //Codigo para seleccionar Sede
+        autoCompletetxt2 = findViewById(R.id.txtsede);
+
+        adapterItemsSede = new ArrayAdapter<String>(this,R.layout.list_item,itemssede);
+
+        autoCompletetxt2.setAdapter(adapterItemsSede);
+
+        autoCompletetxt2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+                String item = parent.getItemAtPosition(position).toString();
+                Toast.makeText(getApplicationContext(),"Item: "+item, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //Codigo para seleccionar Especialidad
+        autoCompletetxt3 = findViewById(R.id.txtespe);
+
+        adapterItemsespe = new ArrayAdapter<String>(this,R.layout.list_item,itemsespe);
+
+        autoCompletetxt3.setAdapter(adapterItemsespe);
+
+        autoCompletetxt3.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+                String item = parent.getItemAtPosition(position).toString();
+                Toast.makeText(getApplicationContext(),"Item: "+item, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void recibirdatos(){
@@ -48,7 +135,6 @@ public class FormulariodeCitas extends AppCompatActivity {
             sede.setText(txtsede);
             turno.setText(txtturno);
             doctor.setText(txtdoc);
-
         }
     }
 
@@ -69,8 +155,6 @@ public class FormulariodeCitas extends AppCompatActivity {
         });
     }
 
-
-
     private boolean validarcampos(){
         String t1 = nombre.getText().toString();
         String t2 = apellido.getText().toString();
@@ -87,12 +171,12 @@ public class FormulariodeCitas extends AppCompatActivity {
         }
 
         if(t2.equals("")){
-            apellido.setError("Apellido esObligatorio");
+            apellido.setError("Apellido es Obligatorio");
             vacio = false;
         }
 
         if(t3.equals("")){
-            dni.setError("DNI es Obligatorio");
+            dni.setError("Numero de telefono es Obligatorio");
             vacio = false;
         }
 
@@ -106,12 +190,10 @@ public class FormulariodeCitas extends AppCompatActivity {
             vacio = false;
         }
 
-        if(t5 != "San Isidro"){
-            sede.setError("Las sedes disponibles son San Isidro y La Molina");
+        if(t5 != "ISSS"){
             vacio = false;
 
-        }else if (t5 != "La Molina") {
-            sede.setError("Las sedes disponibles son San Isidro y La Molina");
+        }else if (t5 != "San Pedro") {
             vacio = false;
 
         }else{
@@ -166,7 +248,4 @@ public class FormulariodeCitas extends AppCompatActivity {
         });
         ventana.create().show();
     }
-
-
-
 }

@@ -4,18 +4,33 @@
     <group android:checkableBehavior="single">
 
         <item
-            android:id="@+id/nav_home"
-            android:title="Inicio"
-            android:icon="@drawable/home"/>
+            android:id="@+id/nav_menu"
+            android:title="Menu"
+            android:icon="@drawable/ic_baseline_medico"/>
 
         <item
-            android:id="@+id/nav_ayuda"
-            android:title="Ayuda"
-            android:icon="@drawable/help"/>
-        <item
-            android:id="@+id/nav_acercade"
-            android:title="Acerca de"
-            android:icon="@drawable/acercade"/>
+            android:id="@+id/nav_doctores"
+            android:title="Doctores"
+            android:icon="@drawable/doc"/>
+
+    </group>
+
+    <group android:checkableBehavior="single">
+
+        <item android:title="Configuracion">
+            <menu>
+                <group>
+                    <item
+                        android:id="@+id/nav_ayuda"
+                        android:title="Ayuda"
+                        android:icon="@drawable/help"/>
+                    <item
+                        android:id="@+id/nav_acercade"
+                        android:title="Acerca de"
+                        android:icon="@drawable/acercade"/>
+                </group>
+            </menu>
+        </item>
 
     </group>
 
